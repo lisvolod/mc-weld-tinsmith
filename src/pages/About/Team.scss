@@ -1,4 +1,5 @@
-@import '../../styles/variables';
+@use "sass:color";
+@use '../../styles/variables' as *;
 
 .team-page {
   padding: $spacing-xl 0;
@@ -14,7 +15,7 @@
 
     .subtitle {
       font-size: $font-size-large;
-      color: lighten($neutral-dark, 20%);
+      color: color.scale($neutral-dark, $lightness: 20%);
     }
   }
 
@@ -92,7 +93,7 @@
     }
 
     .category {
-      color: lighten($neutral-dark, 30%);
+      color: color.scale($neutral-dark,  $lightness: 30%);
       font-size: $font-size-small;
     }
   }

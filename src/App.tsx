@@ -11,10 +11,12 @@ import Practice from './pages/Students/Practice';
 import Achievements from './pages/Achievements/Achievements';
 import Contacts from './pages/Contacts/Contacts';
 import './styles/global.scss';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />

@@ -1,4 +1,5 @@
-@import '../../styles/variables';
+@use "sass:color";
+@use '../../styles/variables' as *;
 
 .professions-page {
   padding: $spacing-xl 0;
@@ -14,7 +15,7 @@
 
     .subtitle {
       font-size: $font-size-large;
-      color: lighten($neutral-dark, 20%);
+      color: color.scale($neutral-dark, $lightness: 20%);
       max-width: 800px;
       margin: 0 auto;
       line-height: 1.6;
@@ -179,7 +180,7 @@
   .coming-soon {
     text-align: center;
     padding: $spacing-xl;
-    color: lighten($neutral-dark, 30%);
+    color: color.scale($neutral-dark,  $lightness: 30%);
     font-style: italic;
     font-size: $font-size-large;
   }
@@ -189,7 +190,7 @@
   }
 
   .quality-card {
-    background: linear-gradient(135deg, $accent-color 0%, darken($accent-color, 10%) 100%);
+    background: linear-gradient(135deg, $accent-color 0%, color.adjust($accent-color, $lightness: -10%) 100%);
     color: $white;
     padding: $spacing-xl;
     border-radius: $radius-lg;
