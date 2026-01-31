@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Briefcase, DollarSign, TrendingUp, GraduationCap, Flame, Shield, Wrench, BookOpen, CheckCircle, Award } from 'lucide-react';
+import { Briefcase, DollarSign, TrendingUp, GraduationCap, Flame,  Wrench } from 'lucide-react';
 import './Home.scss';
 
 const Home = () => {
