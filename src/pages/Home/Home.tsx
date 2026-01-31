@@ -25,6 +25,7 @@ const Home = () => {
         </div>
       </section>
 
+
       {/* Why This Profession Section */}
       <section className="why-section">
         <div className="container">
