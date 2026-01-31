@@ -1,0 +1,147 @@
+@import '../../styles/variables';
+
+.team-page {
+  padding: $spacing-xl 0;
+
+  .page-header {
+    text-align: center;
+    margin-bottom: $spacing-xxl;
+
+    h1 {
+      color: $primary-color;
+      margin-bottom: $spacing-sm;
+    }
+
+    .subtitle {
+      font-size: $font-size-large;
+      color: lighten($neutral-dark, 20%);
+    }
+  }
+
+  .mission-section {
+    margin-bottom: $spacing-xxl;
+  }
+
+  .mission-card {
+    background: $gradient-primary;
+    color: $white;
+    padding: $spacing-xl;
+    border-radius: $radius-lg;
+    text-align: center;
+    box-shadow: $shadow-lg;
+
+    h2 {
+      color: $white;
+      margin-bottom: $spacing-md;
+    }
+
+    p {
+      font-size: $font-size-large;
+      font-style: italic;
+      line-height: 1.8;
+    }
+  }
+
+  .team-section {
+    margin-bottom: $spacing-xxl;
+
+    h2 {
+      text-align: center;
+      color: $primary-color;
+      margin-bottom: $spacing-xl;
+    }
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: $spacing-lg;
+
+    @media (max-width: $breakpoint-mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .team-card {
+    background: $white;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-md;
+    overflow: hidden;
+    transition: all $transition-normal;
+    border-left: 4px solid $secondary-color;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: $shadow-lg;
+    }
+
+    .team-card-content {
+      padding: $spacing-lg;
+    }
+
+    h3 {
+      color: $neutral-dark;
+      font-size: $font-size-h4;
+      margin-bottom: $spacing-sm;
+    }
+
+    .position {
+      color: $primary-color;
+      font-weight: 600;
+      margin-bottom: $spacing-xs;
+    }
+
+    .category {
+      color: lighten($neutral-dark, 30%);
+      font-size: $font-size-small;
+    }
+  }
+
+  .directions-section {
+    h2 {
+      text-align: center;
+      color: $primary-color;
+      margin-bottom: $spacing-xl;
+    }
+  }
+
+  .directions-list {
+    display: grid;
+    gap: $spacing-md;
+  }
+
+  .direction-item {
+    display: flex;
+    gap: $spacing-md;
+    padding: $spacing-lg;
+    background: $neutral-light;
+    border-radius: $radius-md;
+    transition: all $transition-normal;
+
+    &:hover {
+      background: $white;
+      box-shadow: $shadow-sm;
+      transform: translateX($spacing-xs);
+    }
+
+    .direction-number {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $gradient-primary;
+      color: $white;
+      font-weight: 700;
+      font-size: $font-size-large;
+      border-radius: 50%;
+    }
+
+    p {
+      flex: 1;
+      color: $neutral-dark;
+      line-height: 1.6;
+    }
+  }
+}

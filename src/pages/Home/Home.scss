@@ -1,0 +1,293 @@
+@import '../../styles/variables';
+
+.home {
+  // Hero Section
+  .hero {
+    position: relative;
+    height: 600px;
+    background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $breakpoint-mobile) {
+      height: 500px;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba($neutral-dark, 0.3);
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: $white;
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: $spacing-md;
+      text-shadow: 2px 2px 4px rgba($black, 0.3);
+
+      @media (max-width: $breakpoint-tablet) {
+        font-size: 2.5rem;
+      }
+
+      @media (max-width: $breakpoint-mobile) {
+        font-size: 2rem;
+      }
+    }
+
+    .hero-subtitle {
+      font-size: $font-size-large;
+      margin-bottom: $spacing-xl;
+      text-shadow: 1px 1px 2px rgba($black, 0.3);
+
+      @media (max-width: $breakpoint-mobile) {
+        font-size: $font-size-base;
+      }
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: $spacing-md;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .btn {
+        padding: $spacing-md $spacing-xl;
+        font-size: $font-size-large;
+
+        @media (max-width: $breakpoint-mobile) {
+          padding: $spacing-sm $spacing-lg;
+          font-size: $font-size-base;
+        }
+      }
+
+      .btn-outline {
+        border-color: $white;
+        color: $white;
+
+        &:hover {
+          background-color: $white;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+  // Section Title
+  .section-title {
+    font-size: $font-size-h2;
+    margin-bottom: $spacing-xl;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background: $secondary-color;
+      border-radius: 2px;
+    }
+  }
+
+  // Why Section
+  .why-section {
+    padding: $spacing-xxl 0;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: $spacing-xl;
+    margin-top: $spacing-xl;
+
+    @media (max-width: $breakpoint-mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .feature-card {
+    text-align: center;
+    padding: $spacing-xl;
+    background: $white;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-sm;
+    transition: all $transition-normal;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: $shadow-lg;
+    }
+
+    .feature-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto $spacing-md;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, $primary-color 0%, $accent-color 100%);
+      color: $white;
+
+      svg {
+        stroke-width: 1.5;
+      }
+    }
+
+    h3 {
+      color: $primary-color;
+      margin-bottom: $spacing-sm;
+    }
+
+    p {
+      color: lighten($neutral-dark, 20%);
+      line-height: 1.6;
+    }
+  }
+
+  // Professions Preview
+  .professions-preview {
+    padding: $spacing-xxl 0;
+  }
+
+  .professions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-xl;
+    margin-top: $spacing-xl;
+
+    @media (max-width: $breakpoint-mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .profession-card {
+    background: $white;
+    padding: $spacing-xl;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-md;
+    border-top: 4px solid $primary-color;
+    transition: all $transition-normal;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: $shadow-lg;
+      border-top-color: $secondary-color;
+    }
+
+    .profession-icon {
+      color: $secondary-color;
+      margin-bottom: $spacing-md;
+    }
+
+    h3 {
+      color: $primary-color;
+      margin-bottom: $spacing-sm;
+    }
+
+    .profession-code {
+      color: $secondary-color;
+      font-weight: 600;
+      margin-bottom: $spacing-md;
+    }
+
+    p {
+      margin-bottom: $spacing-lg;
+      color: lighten($neutral-dark, 20%);
+    }
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  // Skills Section
+  .skills-section {
+    padding: $spacing-xxl 0;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-lg;
+    margin-top: $spacing-xl;
+
+    @media (max-width: $breakpoint-mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .skill-item {
+    display: flex;
+    flex-direction: column;
+    padding: $spacing-lg;
+    background: $neutral-light;
+    border-radius: $radius-md;
+    transition: all $transition-normal;
+
+    &:hover {
+      background: $white;
+      box-shadow: $shadow-md;
+    }
+
+    .skill-number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: $secondary-color;
+      margin-bottom: $spacing-sm;
+    }
+
+    h4 {
+      color: $primary-color;
+      margin-bottom: $spacing-xs;
+    }
+
+    p {
+      color: lighten($neutral-dark, 20%);
+      font-size: $font-size-small;
+    }
+  }
+
+  // CTA Section
+  .cta-section {
+    background: $gradient-primary;
+    color: $white;
+    padding: $spacing-xxl 0;
+    text-align: center;
+    margin-top: $spacing-xxl;
+
+    h2 {
+      color: $white;
+      margin-bottom: $spacing-md;
+    }
+
+    p {
+      font-size: $font-size-large;
+      margin-bottom: $spacing-xl;
+      opacity: 0.95;
+    }
+
+    .btn {
+      padding: $spacing-md $spacing-xl;
+      font-size: $font-size-large;
+    }
+  }
+}

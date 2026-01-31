@@ -1,0 +1,233 @@
+@import '../../styles/variables';
+
+.facilities-page {
+  padding: $spacing-xl 0;
+
+  .page-header {
+    text-align: center;
+    margin-bottom: $spacing-xl;
+
+    h1 {
+      color: $primary-color;
+      margin-bottom: $spacing-md;
+    }
+
+    .subtitle {
+      font-size: $font-size-large;
+      color: lighten($neutral-dark, 20%);
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+  }
+
+  .intro-section {
+    margin-bottom: $spacing-xxl;
+  }
+
+  .intro-card {
+    background: $gradient-primary;
+    color: $white;
+    padding: $spacing-xl;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-md;
+    text-align: center;
+
+    p {
+      font-size: $font-size-large;
+      line-height: 1.8;
+      margin: 0;
+      max-width: 900px;
+      margin: 0 auto;
+
+      strong {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  .facility-section {
+    margin-bottom: $spacing-xxl;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: $spacing-lg;
+    margin-bottom: $spacing-xl;
+
+    @media (max-width: $breakpoint-mobile) {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .section-icon {
+      flex-shrink: 0;
+      color: $secondary-color;
+    }
+
+    h2 {
+      color: $neutral-dark;
+      margin-bottom: $spacing-xs;
+      font-size: $font-size-h2;
+
+      @media (max-width: $breakpoint-mobile) {
+        font-size: $font-size-h3;
+      }
+    }
+
+    p {
+      color: lighten($neutral-dark, 20%);
+      margin: 0;
+      font-size: $font-size-base;
+    }
+  }
+
+  .slider-container {
+    background: $white;
+    padding: $spacing-lg;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-lg;
+
+    @media (max-width: $breakpoint-mobile) {
+      padding: $spacing-md;
+    }
+  }
+
+  // Swiper Custom Styles
+  .facilities-swiper {
+    border-radius: $radius-md;
+    overflow: hidden;
+
+    .slide-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; // 16:9 aspect ratio
+      overflow: hidden;
+      background: $neutral-light;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background: $white;
+      }
+    }
+
+    // Navigation arrows
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: $white;
+      background: rgba($primary-color, 0.8);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      transition: all $transition-normal;
+
+      &::after {
+        font-size: $font-size-large;
+        font-weight: bold;
+      }
+
+      &:hover {
+        background: $primary-color;
+        transform: scale(1.1);
+      }
+
+      @media (max-width: $breakpoint-mobile) {
+        width: 40px;
+        height: 40px;
+
+        &::after {
+          font-size: $font-size-base;
+        }
+      }
+    }
+
+    .swiper-button-prev {
+      left: $spacing-md;
+    }
+
+    .swiper-button-next {
+      right: $spacing-md;
+    }
+
+    // Pagination dots
+    .swiper-pagination {
+      bottom: $spacing-md;
+
+      .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background: $white;
+        opacity: 0.6;
+        transition: all $transition-normal;
+
+        &-active {
+          opacity: 1;
+          background: $secondary-color;
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  // Placeholder styles
+  .placeholder {
+    padding: $spacing-xxl;
+    text-align: center;
+    background: $neutral-light;
+    border-radius: $radius-md;
+    border: 2px dashed lighten($neutral-dark, 40%);
+
+    p {
+      color: lighten($neutral-dark, 20%);
+      margin-bottom: $spacing-sm;
+      font-size: $font-size-base;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    code {
+      background: rgba($primary-color, 0.1);
+      padding: 4px 8px;
+      border-radius: $radius-sm;
+      color: $primary-color;
+      font-family: 'Courier New', monospace;
+      font-size: $font-size-small;
+    }
+  }
+
+  // 3D Tour Section
+  .tour-section {
+    margin-bottom: $spacing-xl;
+
+    .section-header {
+      margin-bottom: $spacing-lg;
+    }
+  }
+
+  .tour-container {
+    background: $white;
+    padding: $spacing-md;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-lg;
+    overflow: hidden;
+
+    .tour-iframe {
+      border: none;
+      border-radius: $radius-md;
+      display: block;
+      box-shadow: $shadow-sm;
+
+      @media (max-width: $breakpoint-mobile) {
+        height: 400px;
+      }
+    }
+  }
+}

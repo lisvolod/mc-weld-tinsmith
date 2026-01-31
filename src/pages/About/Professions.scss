@@ -1,0 +1,213 @@
+@import '../../styles/variables';
+
+.professions-page {
+  padding: $spacing-xl 0;
+
+  .page-header {
+    text-align: center;
+    margin-bottom: $spacing-xl;
+
+    h1 {
+      color: $primary-color;
+      margin-bottom: $spacing-md;
+    }
+
+    .subtitle {
+      font-size: $font-size-large;
+      color: lighten($neutral-dark, 20%);
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+  }
+
+  .intro-section {
+    margin-bottom: $spacing-xxl;
+  }
+
+  .intro-card {
+    background: $gradient-primary;
+    color: $white;
+    padding: $spacing-xl;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-md;
+
+    p {
+      font-size: $font-size-large;
+      line-height: 1.8;
+      margin: 0;
+
+      strong {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  .profession-section {
+    margin-bottom: $spacing-xxl;
+    padding: $spacing-xl;
+    background: $neutral-light;
+    border-radius: $radius-lg;
+
+    &:last-of-type {
+      margin-bottom: $spacing-xl;
+    }
+  }
+
+  .profession-header {
+    display: flex;
+    align-items: center;
+    gap: $spacing-lg;
+    margin-bottom: $spacing-xl;
+    padding-bottom: $spacing-lg;
+    border-bottom: 3px solid $secondary-color;
+
+    @media (max-width: $breakpoint-mobile) {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .profession-icon {
+      color: $secondary-color;
+      flex-shrink: 0;
+    }
+
+    h2 {
+      color: $neutral-dark;
+      margin-bottom: $spacing-xs;
+    }
+
+    .profession-code {
+      color: $primary-color;
+      font-weight: 600;
+      font-size: $font-size-base;
+      margin: 0;
+    }
+  }
+
+  .qualification-block {
+    background: $white;
+    padding: $spacing-xl;
+    border-radius: $radius-md;
+    margin-bottom: $spacing-lg;
+    box-shadow: $shadow-sm;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    h3 {
+      color: $primary-color;
+      font-size: $font-size-h3;
+      margin-bottom: $spacing-lg;
+      display: flex;
+      align-items: center;
+      gap: $spacing-sm;
+
+      @media (max-width: $breakpoint-mobile) {
+        font-size: $font-size-h4;
+      }
+
+      .inline-icon {
+        color: $accent-color;
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-lg;
+
+    @media (min-width: $breakpoint-tablet) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .content-card {
+    padding: $spacing-lg;
+    background: $neutral-light;
+    border-radius: $radius-md;
+    border-left: 4px solid $primary-color;
+
+    &.knowledge {
+      border-left-color: $accent-color;
+    }
+
+    h4 {
+      color: $neutral-dark;
+      font-size: $font-size-h4;
+      margin-bottom: $spacing-md;
+      display: flex;
+      align-items: center;
+      gap: $spacing-xs;
+
+      .inline-icon {
+        color: $secondary-color;
+        flex-shrink: 0;
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        position: relative;
+        padding-left: $spacing-lg;
+        margin-bottom: $spacing-sm;
+        line-height: 1.6;
+        color: $neutral-dark;
+
+        &::before {
+          content: '▸';
+          position: absolute;
+          left: 0;
+          color: $secondary-color;
+          font-weight: bold;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .coming-soon {
+    text-align: center;
+    padding: $spacing-xl;
+    color: lighten($neutral-dark, 30%);
+    font-style: italic;
+    font-size: $font-size-large;
+  }
+
+  .quality-section {
+    margin-top: $spacing-xxl;
+  }
+
+  .quality-card {
+    background: linear-gradient(135deg, $accent-color 0%, darken($accent-color, 10%) 100%);
+    color: $white;
+    padding: $spacing-xl;
+    border-radius: $radius-lg;
+    text-align: center;
+    box-shadow: $shadow-lg;
+
+    h3 {
+      color: $white;
+      margin-bottom: $spacing-md;
+      font-size: $font-size-h3;
+    }
+
+    p {
+      font-size: $font-size-large;
+      line-height: 1.8;
+      margin: 0;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  }
+}

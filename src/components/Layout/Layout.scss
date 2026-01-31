@@ -1,0 +1,16 @@
+@import '../../styles/variables';
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding-top: $header-height;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding-top: $header-height-mobile;
+  }
+}
