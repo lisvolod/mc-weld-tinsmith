@@ -93,7 +93,7 @@
     }
 
     .category {
-      color: color.scale($neutral-dark,  $lightness: 30%);
+      color: color.scale($neutral-dark, $lightness: 30%);
       font-size: $font-size-small;
     }
   }
@@ -143,6 +143,82 @@
       flex: 1;
       color: $neutral-dark;
       line-height: 1.6;
+    }
+  }
+
+  // Presentation Section
+  .presentation-section {
+    margin-top: $spacing-xxl;
+  }
+
+  .presentation-card {
+    background: linear-gradient(135deg, $accent-color 0%, color.adjust($accent-color, $lightness: -10%) 100%);
+    padding: $spacing-xxl;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-lg;
+    text-align: center;
+
+    @media (max-width: $breakpoint-mobile) {
+      padding: $spacing-xl;
+    }
+
+    .presentation-icon {
+      color: $white;
+      margin: 0 auto $spacing-lg;
+      opacity: 0.9;
+    }
+
+    .presentation-content {
+      max-width: 700px;
+      margin: 0 auto;
+
+      h3 {
+        color: $white;
+        font-size: $font-size-h2;
+        margin-bottom: $spacing-md;
+
+        @media (max-width: $breakpoint-mobile) {
+          font-size: $font-size-h3;
+        }
+      }
+
+      p {
+        color: rgba($white, 0.95);
+        font-size: $font-size-large;
+        line-height: 1.8;
+        margin-bottom: $spacing-xl;
+      }
+
+      .presentation-link {
+        display: inline-flex;
+        align-items: center;
+        gap: $spacing-sm;
+        padding: $spacing-md $spacing-xl;
+        background: $white;
+        color: $accent-color;
+        text-decoration: none;
+        border-radius: $radius-md;
+        font-weight: 700;
+        font-size: $font-size-large;
+        transition: all $transition-normal;
+        box-shadow: 0 4px 12px rgba($black, 0.15);
+
+        @media (max-width: $breakpoint-mobile) {
+          padding: $spacing-sm $spacing-lg;
+          font-size: $font-size-base;
+        }
+
+        &:hover {
+          background: $secondary-color;
+          color: $white;
+          transform: translateY(-3px);
+          box-shadow: 0 8px 20px rgba($black, 0.25);
+        }
+
+        svg {
+          flex-shrink: 0;
+        }
+      }
     }
   }
 }

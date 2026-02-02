@@ -1,3 +1,5 @@
+import { FileText, ExternalLink, Award } from 'lucide-react';
+import mcPresentationPDF from '../../assets/presentations/welding_and_metalworking_technologies_MC.pdf';
 import './Team.scss';
 
 const Team = () => {
@@ -75,6 +77,31 @@ const Team = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* Presentation Section */}
+        <section className="presentation-section">
+          <div className="presentation-card">
+            <Award size={48} className="presentation-icon" />
+            <div className="presentation-content">
+              <h3>Презентація методичної комісії</h3>
+              <p>
+                Детальна презентація про діяльність методичної комісії зварювальних 
+                та слюсарних технологій, досягнення, матеріально-технічну базу та 
+                результати роботи
+              </p>
+              <a 
+                href={mcPresentationPDF}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="presentation-link"
+              >
+                <FileText size={20} />
+                Переглянути презентацію
+                <ExternalLink size={16} />
+              </a>
+            </div>
           </div>
         </section>
 
